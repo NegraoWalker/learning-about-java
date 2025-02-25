@@ -12,9 +12,7 @@ public class Variaveis {
         */
 
         String nome = "Walker";
-        int idade = 32;
-        double salarioAtual = 3120.465;
-        
-
+        int age = 32;
+        double salary = 3120.465;
     }
 }
