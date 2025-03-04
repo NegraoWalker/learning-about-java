@@ -56,6 +56,14 @@ public class EstruturaCondicional {
             default:
                 System.out.println("Dia inválido");
         }
+
+        System.out.println("============================================================");
+
+        int idade = 20;
+        String status;
+        status = (idade >= 18) ? "Maior de idade" : "Menor de idade";
+        System.out.println(status);
+
         System.out.println("============================================================");
     }
 }
