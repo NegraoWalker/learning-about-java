@@ -1,6 +1,6 @@
 package conteudo1;
 
-public class EstruturaCondicional {
+public class EstruturasDeCondicao {
     public static void main(String[] args) {
         System.out.println("============================================================");
         int numero1 = 10;
