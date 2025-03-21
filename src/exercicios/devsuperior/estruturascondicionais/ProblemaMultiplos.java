@@ -1,4 +1,4 @@
-package exercicios.devsuperior.estruturacondicional;
+package exercicios.devsuperior.estruturascondicionais;
 
 import java.util.Locale;
 import java.util.Scanner;
