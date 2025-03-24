@@ -21,12 +21,11 @@ public class ProblemaSomaImpares {
             fim = numero2;
         }
 
-        for (int i = inicio; i < fim; i++) {
+        for (int i = inicio + 1; i < fim; i++) {
             if (i % 2 != 0) {
                 soma += i;
             }
         }
-
 
     System.out.println("Soma: " + soma);
     scanner.close();
