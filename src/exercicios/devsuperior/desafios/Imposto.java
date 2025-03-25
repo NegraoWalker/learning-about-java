@@ -1,9 +1,9 @@
-package exercicios.devsuperior.estruturascondicionais;
+package exercicios.devsuperior.desafios;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-public class DesafioImposto {
+public class Imposto {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner scanner = new Scanner(System.in);
@@ -59,7 +59,6 @@ public class DesafioImposto {
         System.out.printf("Imposto bruto total: R$%.2f\n", impostoBrutoTotal);
         System.out.printf("Abatimento: R$%.2f\n", abatimentoReal);
         System.out.printf("Imposto devido: R$%.2f\n", impostoDevido);
-
         scanner.close();
     }
 }
