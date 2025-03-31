@@ -1,4 +1,4 @@
-package conteudo2.classeeobjeto;
+package conteudo2.exemplos_de_classe_e_objeto;
 
 public class Caneta {
     //Atributos:
