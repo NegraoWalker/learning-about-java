@@ -1,4 +1,4 @@
-package exercicios.devsuperior.desafios;
+package exercicios.devsuperior.desafios.atletas;
 
 import java.util.Locale;
 import java.util.Scanner;

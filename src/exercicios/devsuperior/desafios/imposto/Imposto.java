@@ -1,4 +1,4 @@
-package exercicios.devsuperior.desafios;
+package exercicios.devsuperior.desafios.imposto;
 
 import java.util.Locale;
 import java.util.Scanner;
