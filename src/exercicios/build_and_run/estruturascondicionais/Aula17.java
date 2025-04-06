@@ -1,4 +1,4 @@
-package exercicios.buildandrun.estruturascondicionais;
+package exercicios.build_and_run.estruturascondicionais;
 
 import java.util.Scanner;
 

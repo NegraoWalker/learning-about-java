@@ -1,4 +1,4 @@
-package exercicios.buildandrun.variaveiseostiposdedados;
+package exercicios.build_and_run.variaveis_e_os_tipos_de_dados;
 
 import java.util.Locale;
 import java.util.Scanner;

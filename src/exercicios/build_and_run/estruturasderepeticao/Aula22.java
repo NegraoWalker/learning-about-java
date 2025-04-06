@@ -1,4 +1,4 @@
-package exercicios.buildandrun.estruturasderepeticao;
+package exercicios.build_and_run.estruturasderepeticao;
 
 import java.util.Locale;
 import java.util.Scanner;
