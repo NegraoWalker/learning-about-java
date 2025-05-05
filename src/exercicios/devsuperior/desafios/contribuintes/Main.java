@@ -10,45 +10,38 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner scanner = new Scanner(System.in);
 
-        //Variáveis:
         int n;
         double salaryIncome, servicesIncome, capitalIncome, healthSpending, educationSpending;
 
-
-        //Armazenamento de dados na lista:
-        System.out.println("======================================================================================");
-        System.out.print("Informe a quantidade de contribuintes: ");
+        System.out.print("Quantos contribuintes você vai digitar? ");
         n = scanner.nextInt();
-        System.out.println();
 
         List<TaxPayer> taxPayers = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
-            System.out.println("Digite os dados do contribuinte " + (i+1) + ":");
-            System.out.println("Informe a renda anual com salário: ");
+            System.out.println("Digite os dados do " + (i + 1) + "o contribuinte:");
+            System.out.print("Renda anual com salário: ");
             salaryIncome = scanner.nextDouble();
-            System.out.println("Informe a renda anual com prestação de serviço: ");
+            System.out.print("Renda anual com prestação de serviço: ");
             servicesIncome = scanner.nextDouble();
-            System.out.println("Informe a renda anual com ganho de capital: ");
+            System.out.print("Renda anual com ganho de capital: ");
             capitalIncome = scanner.nextDouble();
-            System.out.println("Informe os gastos médicos: ");
+            System.out.print("Gastos médicos: ");
             healthSpending = scanner.nextDouble();
-            System.out.println("Informe os gastos educacionais: ");
+            System.out.print("Gastos educacionais: ");
             educationSpending = scanner.nextDouble();
 
             taxPayers.add(new TaxPayer(salaryIncome, servicesIncome, capitalIncome, healthSpending, educationSpending));
         }
 
-        //Apresentação dos resultados:
+        System.out.println();
+
         for (int i = 0; i < n; i++) {
-            System.out.println("Resumo do contribuinte " + (i+1) + ":");
-            //Imposto de renda bruto total
-            //Abatimento
-            //Imposto Devido
+            System.out.println("Resumo do " + (i + 1) + "o contribuinte:");
+            System.out.printf("Imposto bruto total: R$%.2f\n", taxPayers.get(i).grossTax());
+            System.out.printf("Abatimento: R$%.2f\n", taxPayers.get(i).taxRebate());
+            System.out.printf("Imposto devido: R$%.2f\n", taxPayers.get(i).netTax());
         }
-
-
-
         scanner.close();
     }
 }
