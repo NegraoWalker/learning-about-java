@@ -40,6 +40,12 @@ public class Main {
         }
 
         //Apresentação dos resultados:
+        for (int i = 0; i < n; i++) {
+            System.out.println("Resumo do contribuinte " + (i+1) + ":");
+            //Imposto de renda bruto total
+            //Abatimento
+            //Imposto Devido
+        }
 
 
 

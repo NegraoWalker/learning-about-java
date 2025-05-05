@@ -63,19 +63,26 @@ public class TaxPayer { //PagadorDeImpostos
 
     //Especificos da classe:
     public double salaryTax() { //imposto sobre salário
+        if (this.salaryIncome < 3000.00) {
+            return 0.0;
+        } else if (this.salaryIncome >= 3000.00 && this.salaryIncome < 5000.00) {
+            return this.salaryIncome * 0.1;
+        } else if (this.salaryIncome >= 5000.00) {
+            return this.salaryIncome * 0.2;
+        }
         return 0.0;
     }
 
     public double servicesTax() { //imposto sobre serviços
-        return 0.0;
+        return this.servicesIncome * 0.15;
     }
 
     public double capitalTax() { //imposto sobre capital
-        return 0.0;
+        return this.capitalIncome * 0.2;
     }
 
     public double grossTax() { //imposto bruto
-        return 0.0;
+        return this.salaryTax() + this.servicesTax() + this.capitalTax();
     }
 
     public double taxRebate() { //abatimento/restituição do imposto
