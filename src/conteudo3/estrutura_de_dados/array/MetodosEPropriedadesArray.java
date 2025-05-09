@@ -3,7 +3,7 @@ package conteudo3.estrutura_de_dados.array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MetodosEPropriedades {
+public class MetodosEPropriedadesArray {
     public static void main(String[] args) {
         System.out.println("-----CRIANDO E ACESSANDO ARRAYS:-----");
         // Declaração e inicialização

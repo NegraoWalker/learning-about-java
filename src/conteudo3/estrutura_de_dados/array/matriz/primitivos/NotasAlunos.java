@@ -1,4 +1,4 @@
-package conteudo3.estrutura_de_dados.matriz.primitivos;
+package conteudo3.estrutura_de_dados.array.matriz.primitivos;
 
 public class NotasAlunos {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package conteudo3.estrutura_de_dados.matriz.referencia;
+package conteudo3.estrutura_de_dados.array.matriz.referencia;
 
 public class Main {
     public static void main(String[] args) {
