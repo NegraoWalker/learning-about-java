@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-public class TesteList {
+public class Main {
     public static void main(String[] args) {
         // 1. Declaração e inicialização de listas
         List<String> listaArrayList = new ArrayList<>(); // Implementação com array dinâmico
