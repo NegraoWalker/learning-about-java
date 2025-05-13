@@ -1,11 +1,9 @@
 package conteudo3.data_hora;
 
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
 
-public class Conversao {
+public class ConversaoStringParaDate {
     public static void main(String[] args) {
         //CONVERSÃO:
         LocalDate dataLocal1 = LocalDate.parse("2025-05-16"); //Conversão de um String para uma data local
@@ -22,5 +20,9 @@ public class Conversao {
 
         Instant dataEHoraGlobal2 = Instant.parse("2025-05-08T21:00:00.00-03:00:00"); //Conversão de uma String para uma data e hora global considerando o horário do brasil local -3:00
         System.out.println("Data e Hora Global 1 [Conversão de String para data e hora - Formato no padrão ISO 8601]: " + dataEHoraGlobal2); //Conversão de uma String para uma data e hora global
+
+        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").withZone(ZoneId.systemDefault()); //Criando um formato com Fuso Horário
+        System.out.println("Data e Hora Global 3 [Conversão de String para data e hora - Formato no padrão customizado com fuso horário] " + formatter1.format(dataEHoraGlobal1));
+
     }
 }
