@@ -33,6 +33,7 @@ public class InstanciacaoEFormatacao {
         DateTimeFormatter formatoBR2 = DateTimeFormatter.ofPattern("HH:mm:ss"); //Formato BR para hora
         DateTimeFormatter formatoBR3 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"); //Formato BR para data e hora
 
+
         System.out.println("Data Local 1 [Formato personalizado BR]: " + data1.format(formatoBR1));
         System.out.println("Hora Local 1 [Formato personalizado BR]: " + hora1.format(formatoBR2));
         System.out.println("Data e Hora Local 1 [Formato personalizado BR]: " + dataHora1.format(formatoBR3));
