@@ -1,5 +1,6 @@
 package conteudo3.composicao.devsuperior.exemplo1;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,19 +57,22 @@ public class Worker {
         return contracts;
     }
 
-    public void setContracts(List<HourContract> contracts) {
-        this.contracts = contracts;
-    }
-
     public void addContract(HourContract contract) {
         contracts.add(contract);
     }
 
     public void removeContract(HourContract contract) {
-
+        contracts.remove(contract);
     }
 
-    public Double income(Integer year, Integer month) {
-
+    public double income(int year, int month) {
+        double sum = baseSalary;
+        for (HourContract hourContract : contracts) {
+            LocalDate contractDate = hourContract.getDate();
+            if (year == contractDate.getYear() && month == contractDate.getMonthValue()) {
+                sum += hourContract.totalValue();
+            }
+        }
+        return sum;
     }
 }
