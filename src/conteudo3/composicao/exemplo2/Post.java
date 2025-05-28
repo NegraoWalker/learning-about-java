@@ -1,6 +1,5 @@
-package conteudo3.composicao.devsuperior.exemplo2;
+package conteudo3.composicao.exemplo2;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;

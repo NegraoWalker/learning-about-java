@@ -1,4 +1,4 @@
-package conteudo3.enumeracao.devsuperior;
+package conteudo3.enumeracao;
 
 import java.util.Date;
 

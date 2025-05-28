@@ -1,4 +1,4 @@
-package conteudo3.composicao.devsuperior.exemplo1;
+package conteudo3.composicao.exemplo1;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

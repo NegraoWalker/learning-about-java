@@ -1,4 +1,4 @@
-package conteudo3.composicao.devsuperior.exemplo2;
+package conteudo3.composicao.exemplo2;
 
 public class Comment {
     private String text;
