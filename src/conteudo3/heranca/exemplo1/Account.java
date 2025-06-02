@@ -1,4 +1,4 @@
-package conteudo3.heranca;
+package conteudo3.heranca.exemplo1;
 
 public class Account {
     private Integer number;

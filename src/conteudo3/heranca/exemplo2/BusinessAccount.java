@@ -1,6 +1,6 @@
-package conteudo3.heranca;
+package conteudo3.heranca.exemplo2;
 
-public class BusinessAccount extends Account{
+public class BusinessAccount extends Account {
     private Double loanLimit;
 
     public BusinessAccount() {
@@ -23,5 +23,11 @@ public class BusinessAccount extends Account{
         if (amount <= this.loanLimit) {
             this.balance += amount - 10.0;
         }
+    }
+
+    @Override
+    public void withdraw(double amount) {
+        super.withdraw(amount);
+        balance -= 2.0;
     }
 }
