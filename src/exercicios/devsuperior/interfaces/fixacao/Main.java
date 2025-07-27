@@ -1,5 +1,11 @@
 package exercicios.devsuperior.interfaces.fixacao;
 
+import exercicios.devsuperior.interfaces.fixacao.entities.Contract;
+import exercicios.devsuperior.interfaces.fixacao.entities.Installment;
+import exercicios.devsuperior.interfaces.fixacao.service.ContractService;
+import exercicios.devsuperior.interfaces.fixacao.service.OnlinePaymentService;
+import exercicios.devsuperior.interfaces.fixacao.service.PaypalService;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
@@ -9,24 +15,39 @@ public class Main {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner scanner = new Scanner(System.in);
-        DateTimeFormatter formatoBR = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-        System.out.println("Entre com os dados do contrato:");
-        System.out.println("Número:");
-        int numero = scanner.nextInt();
-        System.out.println("Data (dd/MM/yyyy):");
-        String dataStr = scanner.nextLine();
-        LocalDate data = LocalDate.parse(dataStr, formatoBR);
-        System.out.println("Valor do contrato:");
-        System.out.println();
+        System.out.println("Entre os dados do contrato:");
 
-        System.out.println("Entre com o número de parcelas:");
-        int numeroDeParcelas = scanner.nextInt();
+        System.out.print("Numero: ");
+        int number = scanner.nextInt();
+
+        System.out.print("Data (dd/MM/yyyy): ");
+        LocalDate date = LocalDate.parse(scanner.next(), fmt);
+
+        System.out.print("Valor do contrato: ");
+        double totalValue = scanner.nextDouble();
+
+        System.out.print("Entre com o numero de parcelas: ");
+        int months = scanner.nextInt();
+
+        // Criar contrato
+        Contract contract = new Contract(number, date, totalValue);
+
+        // Criar serviço de pagamento
+        OnlinePaymentService paymentService = new PaypalService();
+
+        // Criar serviço de contratos
+        ContractService contractService = new ContractService(paymentService);
+
+        // Processar contrato
+        contractService.processContract(contract, months);
+
+        // Exibir parcelas
         System.out.println("Parcelas:");
-        //Exibir o processamento aqui!
-
-
-
+        for (Installment installment : contract.getInstallments()) {
+            System.out.println(installment);
+        }
 
         scanner.close();
     }
