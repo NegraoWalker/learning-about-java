@@ -36,11 +36,17 @@ public class MainAcessoElementos {
 
         System.out.println("Último funcionário: " + funcionarios[funcionarios.length - 1]); //Usando length para acessar o último elemento de qualquer array
 
-
-
-
-
-
-
     }
 }
+
+/*
+ * PONTOS-CHAVE PARA LEMBRAR:
+ * 1. Índices começam SEMPRE em 0
+ * 2. Último índice é sempre (length - 1)
+ * 3. Use .length para obter tamanho (SEM parênteses)
+ * 4. Índices podem ser variáveis ou expressões
+ * 5. Sempre valide índices antes de usar
+ * 6. ArrayIndexOutOfBoundsException é o erro mais comum
+ * 7. Índices negativos sempre causam erro em Java
+ * 8. Use try-catch para tratar acessos inseguros
+ */

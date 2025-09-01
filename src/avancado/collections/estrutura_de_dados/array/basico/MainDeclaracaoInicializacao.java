@@ -35,5 +35,33 @@ public class MainDeclaracaoInicializacao {
         String[] cidades = new String[]{"Walker", "Maria", "Antonela", "Julia"};
         System.out.println("Tamanho do array idades: " + idades.length);
         System.out.println("Tamanho do array cidades: " + cidades.length);
+
+        System.out.println("============================================================================================");
+        // ==================== INICIALIZAÇÃO DINÂMICA ====================
+
+        // Tamanho pode ser determinado em tempo de execução
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
+
+        System.out.print("Quantos funcionários tem na sua empresa? ");
+        // int quantidadeFuncionarios = scanner.nextInt();
+        int quantidadeFuncionarios = 5; // Simulando entrada do usuário
+
+        // Criando array com tamanho baseado em input do usuário
+        String[] funcionarios = new String[quantidadeFuncionarios];
+        double[] salarios = new double[quantidadeFuncionarios];
+
+        System.out.println("Arrays criados para " + quantidadeFuncionarios + " funcionários");
     }
 }
+
+/*
+ * PONTOS-CHAVE PARA LEMBRAR:
+ * 1. Declaração apenas reserva o nome da variável
+ * 2. Inicialização cria o array na memória com new ou {}
+ * 3. Arrays têm tamanho FIXO definido na criação
+ * 4. Valores padrão: números=0, boolean=false, objetos=null
+ * 5. Use {} quando souber os valores antecipadamente
+ * 6. Use new Tipo[tamanho] quando for preencher depois
+ * 7. O tamanho pode ser uma variável (determinado em runtime)
+ * 8. Uma vez criado, o tamanho nunca muda
+ */
